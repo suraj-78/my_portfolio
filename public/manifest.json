@@ -15,7 +15,7 @@
       "purpose": "any maskable"
     },
     {
-      "src": "/portfolio image.jpg",
+      "src": "/public/portfolio image.JPG",
       "sizes": "512x512",
       "type": "image/jpeg",
       "purpose": "any maskable"
