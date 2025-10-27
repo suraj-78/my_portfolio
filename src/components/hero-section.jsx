@@ -20,13 +20,17 @@ export function HeroSection() {
 
     const timer = setTimeout(() => {
       if (!isDeleting && displayedText === currentTitle) {
+        // Finished typing, start deleting after pause
         setTimeout(() => setIsDeleting(true), pauseTime);
       } else if (isDeleting && displayedText === "") {
+        // Finished deleting, move to next title
         setIsDeleting(false);
         setCurrentTitleIndex((prev) => (prev + 1) % titles.length);
       } else if (isDeleting) {
+        // Continue deleting
         setDisplayedText(currentTitle.substring(0, displayedText.length - 1));
       } else {
+        // Continue typing
         setDisplayedText(currentTitle.substring(0, displayedText.length + 1));
       }
     }, typingSpeed);
@@ -48,6 +52,7 @@ export function HeroSection() {
         backgroundSize: "100% 100%, 100% 100%, 100% 100%, 50px 50px",
       }}
     >
+      {/* Enhanced Visual Effects */}
       <div className="absolute inset-0 opacity-30">
         <div
           className="absolute inset-0"
@@ -60,6 +65,8 @@ export function HeroSection() {
           }}
         />
       </div>
+
+      {/* Floating Orbs */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-4 h-4 bg-orange-500/20 rounded-full blur-sm float-animation"></div>
         <div
@@ -75,10 +82,15 @@ export function HeroSection() {
           style={{ animationDelay: "6s" }}
         ></div>
       </div>
+
+      {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-black/20 to-orange-900/10"></div>
+
       <div className="relative z-10 container mx-auto pt-10 p-25 flex items-center min-h-screen">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+          {/* Left Content */}
           <div className="space-y-8">
+            {/* Main Heading */}
             <div className="space-y-4">
               <motion.h1
                 className="text-5xl text-white lg:text-7xl font-bold leading-tight"
@@ -130,6 +142,8 @@ export function HeroSection() {
                 ))}
               </motion.h1>
             </div>
+
+            {/* Location */}
             <motion.div
               className="flex items-center space-x-2 text-orange-500"
               initial={{ opacity: 0, x: -30 }}
@@ -170,6 +184,8 @@ export function HeroSection() {
                 ))}
               </span>
             </motion.div>
+
+            {/* Animated Title */}
             <motion.div
               className="space-y-2"
               initial={{ opacity: 0, y: 30 }}
@@ -181,20 +197,24 @@ export function HeroSection() {
                 <span className="animate-pulse ml-1 text-orange-500">|</span>
               </h2>
             </motion.div>
+
+            {/* Social Icons and Resume Button */}
             <motion.div
               className="flex items-center space-x-6 pt-8"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.7, ease: "easeOut" }}
             >
+              {/* Social Icons */}
               <motion.div
                 className="flex space-x-4"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.0, duration: 0.5 }}
               >
+                {/* GitHub */}
                 <motion.a
-                  href="https://github.com/your-github" // Replace with your GitHub
+                  href="https://github.com/suraj-78"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center justify-center transition-colors"
@@ -214,8 +234,9 @@ export function HeroSection() {
                   </svg>
                 </motion.a>
 
+                {/* LinkedIn */}
                 <motion.a
-                  href="https://linkedin.com/in/ssp001"
+                  href="https://www.linkedin.com/in/ssp001/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center justify-center transition-colors"
@@ -235,8 +256,10 @@ export function HeroSection() {
                   </svg>
                 </motion.a>
               </motion.div>
+
+              {/* Resume Button */}
               <motion.a
-                href="#" // Replace with your resume link
+                href=""
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white bg-gray-800 hover:bg-gray-700 px-8 py-3 rounded-full font-semibold transition-colors flex items-center space-x-2"
@@ -255,6 +278,8 @@ export function HeroSection() {
               </motion.a>
             </motion.div>
           </div>
+
+          {/* Right Content - Profile Image */}
           <motion.div
             className="flex justify-center lg:justify-end"
             initial={{ opacity: 0, scale: 0.5, x: 100 }}
@@ -266,7 +291,9 @@ export function HeroSection() {
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
+              {/* Main container with multiple layers */}
               <div className="relative w-80 h-80 lg:w-96 lg:h-96">
+                {/* Outer glow ring */}
                 <motion.div
                   className="absolute inset-0 rounded-full"
                   style={{
@@ -284,6 +311,8 @@ export function HeroSection() {
                 >
                   <div className="w-full h-full rounded-full bg-black" />
                 </motion.div>
+
+                {/* Glass morphism border */}
                 <motion.div
                   className="absolute inset-2 rounded-full backdrop-blur-sm border border-white/20"
                   style={{
@@ -296,12 +325,16 @@ export function HeroSection() {
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.4, duration: 0.6, ease: "backOut" }}
                 />
+
+                {/* Professional shadow base */}
                 <motion.div
                   className="absolute inset-4 rounded-full bg-gradient-to-br from-orange-500/20 to-red-600/20 blur-xl"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 0.6, duration: 0.8 }}
                 />
+
+                {/* Main image container */}
                 <motion.div
                   className="absolute inset-6 rounded-full overflow-hidden"
                   style={{
@@ -330,20 +363,139 @@ export function HeroSection() {
                     transition={{ delay: 0.7, duration: 0.6, ease: "backOut" }}
                   >
                     <Image
-                      src="/portfolio image.jpg" // Your image here
+                      src="/portfolio image.jpg"
                       alt="Suraj Pandit Profile Picture"
                       width={400}
                       height={400}
                       className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+                      style={{ objectPosition: 'center 0%' }}
                       priority
                     />
+                    {/* Overlay gradient for depth */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-white/5 rounded-full" />
                   </motion.div>
+                </motion.div>
+
+                {/* Floating particles */}
+                <motion.div
+                  className="absolute -top-2 -right-2 w-3 h-3 bg-orange-400 rounded-full opacity-80"
+                  animate={{
+                    y: [0, -20, 0],
+                    x: [0, 10, 0],
+                    scale: [1, 1.2, 1],
+                  }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 4,
+                    delay: 2,
+                    ease: "easeInOut",
+                  }}
+                />
+
+                <motion.div
+                  className="absolute -bottom-3 -left-3 w-4 h-4 bg-red-400 rounded-full opacity-70"
+                  animate={{
+                    y: [0, 15, 0],
+                    x: [0, -8, 0],
+                    scale: [1, 0.8, 1],
+                  }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 5,
+                    delay: 2.5,
+                    ease: "easeInOut",
+                  }}
+                />
+
+                <motion.div
+                  className="absolute top-1/4 -left-4 w-2 h-2 bg-yellow-400 rounded-full opacity-60"
+                  animate={{
+                    y: [0, -10, 0],
+                    x: [0, -5, 0],
+                    opacity: [0.6, 1, 0.6],
+                  }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 3.5,
+                    delay: 3,
+                    ease: "easeInOut",
+                  }}
+                />
+
+                {/* Professional skill indicators */}
+                <motion.div
+                  className="absolute -top-6 left-1/2 transform -translate-x-1/2"
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1.8, duration: 0.6 }}
+                >
+                  <div className="flex space-x-1">
+                    {[...Array(3)].map((_, i) => (
+                      <motion.div
+                        key={i}
+                        className="w-2 h-2 bg-orange-400 rounded-full"
+                        animate={{ scale: [1, 1.3, 1] }}
+                        transition={{
+                          repeat: Infinity,
+                          duration: 2,
+                          delay: i * 0.2 + 2,
+                        }}
+                      />
+                    ))}
+                  </div>
+                </motion.div>
+
+                {/* Tech stack indicator */}
+                <motion.div
+                  className="absolute -bottom-8 left-1/2 transform -translate-x-1/2"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 2, duration: 0.6 }}
+                >
+                  <div className="flex items-center space-x-2 bg-black/40 backdrop-blur-sm rounded-full px-4 py-2 border border-orange-500/30">
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                    <span className="text-xs text-orange-300 font-medium">
+                      Available
+                    </span>
+                  </div>
+                </motion.div>
+
+                {/* Orbiting elements */}
+                <motion.div
+                  className="absolute inset-0 pointer-events-none"
+                  animate={{ rotate: 360 }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 15,
+                    ease: "linear",
+                    delay: 2,
+                  }}
+                >
+                  <div className="relative w-full h-full">
+                    <div className="absolute -top-3 left-1/2 w-1.5 h-1.5 bg-blue-400 rounded-full opacity-70" />
+                    <div className="absolute top-1/2 -right-3 w-1 h-1 bg-purple-400 rounded-full opacity-60" />
+                    <div className="absolute -bottom-3 left-1/2 w-2 h-2 bg-green-400 rounded-full opacity-50" />
+                    <div className="absolute top-1/2 -left-3 w-1.5 h-1.5 bg-pink-400 rounded-full opacity-65" />
+                  </div>
                 </motion.div>
               </div>
             </motion.div>
           </motion.div>
         </div>
+      </div>
+
+      {/* Wave decoration at bottom */}
+      <div className="absolute bottom-0 left-0 right-0">
+        <svg
+          viewBox="0 0 1440 200"
+          className="w-full h-auto"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill="rgba(255, 255, 255, 0.05)"
+            d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,90.7C672,85,768,107,864,112C960,117,1056,107,1152,90.7C1248,75,1344,53,1392,42.7L1440,32L1440,200L1392,200C1344,200,1248,200,1152,200C1056,200,960,200,864,200C768,200,672,200,576,200C480,200,384,200,288,200C192,200,96,200,48,200L0,200Z"
+          />
+        </svg>
       </div>
     </section>
   );

@@ -892,8 +892,7 @@ export default function Home() {
         <footer className="py-8 px-4 border-t border-gray-800">
           <div className="container mx-auto max-w-6xl text-center">
             <p className="text-gray-400">
-              © 2025 Suraj Pandit. All rights reserved. Built with ❤️ using
-              Next.js
+              © 2025 Suraj Pandit. All rights reserved. Built with ❤️
             </p>
           </div>
         </footer>
