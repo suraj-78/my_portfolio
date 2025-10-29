@@ -114,7 +114,7 @@ function Navbar({ className }) {
           </a>
         </motion.div>
       </motion.div>
-      {menuOpen && (
+      {/* {menuOpen && (
         <div className="md:hidden w-full flex justify-center pb-4">
           <a
             href="#contact"
@@ -124,7 +124,7 @@ function Navbar({ className }) {
             Let's Talk
           </a>
         </div>
-      )}
+      )} */}
     </motion.div>
   );
 }
