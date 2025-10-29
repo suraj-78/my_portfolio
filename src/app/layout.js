@@ -27,7 +27,7 @@ export const metadata = {
     siteName: "Suraj Pandit Portfolio",
     images: [
       {
-        url: "/public/profile-icon.png",
+        url: "/profile-icon.png",
         width: 1200,
         height: 630,
         alt: "Suraj Pandit - Full-Stack Developer",
