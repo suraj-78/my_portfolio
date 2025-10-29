@@ -414,10 +414,10 @@ export default function Home() {
                   Full-Stack Developer
                 </h3>
                 <p className="text-gray-300 text-lg leading-relaxed">
-                    I’m a passionate Computer Science student and full-stack developer who loves solving real-world problems through code. My core strength lies in quickly understanding challenges and building efficient, scalable solutions — whether it’s using the MERN stack or exploring new technologies beyond it.
+                    I’m a passionate Computer Science student and full-stack developer who loves solving real-world problems through code. My core strength lies in quickly understanding challenges and building efficient, scalable solutions, whether it’s using the MERN stack or exploring new technologies beyond it.
                 </p>
                 <p className="text-gray-300 text-lg leading-relaxed">
-                    I enjoy learning, experimenting with different stacks, and continuously improving my development approach. Always open to collaboration, new ideas, and opportunities — feel free to reach out! 🚀
+                    I enjoy learning, experimenting with different stacks, and continuously improving my development approach. Always open to collaboration, new ideas, and opportunities. Feel free to reach out!!
                 </p>
                 <div className="flex flex-wrap gap-4 pt-4">
                   <div className="flex items-center gap-2 text-orange-400">
