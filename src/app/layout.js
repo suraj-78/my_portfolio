@@ -23,11 +23,11 @@ export const metadata = {
     title: "Suraj Pandit - Full-Stack Developer",
     description:
       "Full-Stack Developer - Creating innovative digital solutions with modern web technologies",
-    url: "https://your-domain.com", // Replace with your domain
+    url: "https://surajpandit.vercel.app/", 
     siteName: "Suraj Pandit Portfolio",
     images: [
       {
-        url: "/public/profile-icon.jpg",
+        url: "/public/profile-icon.png",
         width: 1200,
         height: 630,
         alt: "Suraj Pandit - Full-Stack Developer",
@@ -63,7 +63,7 @@ export default function RootLayout({ children }) {
           content="black-translucent"
         />
         <meta name="apple-mobile-web-app-title" content="Suraj Pandit" />
-        <link rel="canonical" href="https://your-domain.com" />
+        <link rel="canonical" href="https://surajpandit.vercel.app/" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

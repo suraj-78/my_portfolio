@@ -363,7 +363,7 @@ export function HeroSection() {
                     transition={{ delay: 0.7, duration: 0.6, ease: "backOut" }}
                   >
                     <Image
-                      src="/portfolio image.jpg"
+                      src="/public/portfolio-image.jpg"
                       alt="Suraj Pandit Profile Picture"
                       width={400}
                       height={400}
