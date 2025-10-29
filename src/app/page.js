@@ -47,6 +47,7 @@ import {
   IconServer,
   IconWorldWww,
   IconBolt,
+  IconBuilding
 } from "@tabler/icons-react";
 import { Highlighter } from "@/components/ui/highlighter";
 
@@ -285,6 +286,43 @@ export default function Home() {
         "Coursework: Data Structures and Algorithms, Object-Oriented Programming, Operating Systems, DBMS.",
       ],
     },
+    // {
+    //   degree: "Higher Secondary",
+    //   institution: "Dr. Ulhas Patil Eng Medium School",
+    //   location: "Raver, Maharashtra",
+      
+    //   grade: "Percentage : 81.2%",
+    //   icon: IconCertificate,
+    //   achievements: [
+    //     "Physics , Chemistry and Mathematics",
+    //   ],
+    // },
+    // {
+    //   degree: "Secondary",
+    //   institution: "Kendriya Vidyalaya O.F Bhusawal",
+    //   location: "Bhusawal, Maharashtra",
+      
+    //   grade: "Percentage 92.6",
+    //   icon: IconCertificate,
+    //   achievements: [
+    //     "R",
+    //   ],
+    // },
+  ];
+
+  const experience = [
+    {
+      role: "Backend Development Intern",
+      company: "Small Fare",
+      location: "Remote",
+      period: "August 2025 - October 2025",
+      icon: IconBuilding,
+      achievements: [
+        "Implemented secure authentication and authorization middleware in Node.js/Express.js using JWT refresh tokens, ensuring robust session management.",
+        "Migrated raw SQL queries to Prisma ORM, improving type safety and maintainability, and reducing SQL injection risks by 30%.",
+        "Remediated a critical security vulnerability, preventing unauthorized admin access.",
+      ],
+    },
   ];
   
     const achievements = [
@@ -415,6 +453,102 @@ export default function Home() {
                   </motion.div>
                 ))}
               </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Experience Section */}
+        <section id="experience" className="py-20 px-4 relative overflow-hidden">
+
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(255,107,53,0.1),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,rgba(247,147,30,0.1),transparent_50%)]" />
+          <div className="container mx-auto max-w-6xl relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Work{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">
+                  Experience
+                </span>
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-600 mx-auto rounded-full mt-6" />
+            </motion.div>
+
+            <div className="space-y-8">
+              {experience.map((exp, index) => (
+                <motion.div
+                  key={exp.company}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                  className={`flex flex-col lg:flex-row gap-6 lg:gap-8 items-center ${
+                    index % 2 === 0 ? "lg:flex-row-reverse" : ""
+                  }`}
+                >
+                  <div className="flex-1">
+                    <motion.div
+                      className="bg-gradient-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-gray-700/30 hover:border-orange-500/30 transition-all duration-300 group"
+                      whileHover={{ y: -10, scale: 1.02 }}
+                    >
+                      <div className="flex items-start gap-4 sm:gap-6">
+                        <div className="p-3 sm:p-4 bg-gradient-to-br from-orange-500/20 to-red-600/20 rounded-xl">
+                          <exp.icon
+                            size={28}
+                            className="text-orange-400 sm:w-8 sm:h-8"
+                          />
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white group-hover:text-orange-400 transition-colors">
+                              {exp.role}
+                            </h3>
+                            <div className="flex items-center gap-2 text-orange-400 mt-2 lg:mt-0">
+                              <IconCalendar size={18} />
+                              <span className="font-medium">{exp.period}</span>
+                            </div>
+                          </div>
+                          <div className="space-y-3 mb-6">
+                            <div className="flex flex-col lg:flex-row lg:items-center gap-2">
+                              <h4 className="text-base sm:text-lg font-semibold text-gray-200">
+                                {exp.company}
+                              </h4>
+                              <span className="text-sm sm:text-base text-gray-400">
+                                • {exp.location}
+                              </span>
+                            </div>
+                          </div>
+                          <div>
+                            <ul className="space-y-2">
+                              {exp.achievements.map((achievement, i) => (
+                                <motion.li
+                                  key={i}
+                                  className="flex items-start gap-3 text-gray-300"
+                                >
+                                  <div className="w-2 h-2 bg-orange-400 rounded-full flex-shrink-0 mt-2" />
+                                  <span>{achievement}</span>
+                                </motion.li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  </div>
+                  <div className="hidden lg:flex flex-col items-center">
+                    <motion.div
+                      className="w-4 h-4 border-4 border-orange-500 bg-black rounded-full"
+                    />
+                  </div>
+                  <div className="flex-1 hidden lg:block" />
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>

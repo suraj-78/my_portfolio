@@ -86,7 +86,7 @@ export function HeroSection() {
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-black/20 to-orange-900/10"></div>
 
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12">
+      <div className="relative z-10 container mx-auto flex min-h-screen items-center px-4 pt-20 pb-12 sm:px-6 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
           {/* Left Content */}
           <div className="space-y-6 text-center lg:text-left">
