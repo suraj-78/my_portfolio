@@ -865,7 +865,7 @@ export default function Home() {
                     <IconBrandLinkedin size={24} className="text-orange-400" />
                   </motion.a>
                   <motion.a
-                    href="https://github.com/your-github" // Please replace with your actual GitHub link
+                    href="https://github.com/suraj-78" // Please replace with your actual GitHub link
                     target="_blank"
                     className="p-3 bg-gradient-to-br from-gray-700/50 to-gray-800/50 rounded-lg border border-gray-600/30 hover:border-orange-500/50 transition-all duration-300"
                     whileHover={{ scale: 1.1, y: -2 }}

@@ -45,7 +45,6 @@ function Navbar({ className }) {
             "0 0 40px rgba(255, 107, 53, 0.3), 0 0 80px rgba(255, 107, 53, 0.1)",
         }}
       >
-        {/* Brand Name on the left */}
         <motion.div
           className="text-white font-bold text-lg md:text-xl"
           initial={{ opacity: 0, x: -50 }}
@@ -54,8 +53,6 @@ function Navbar({ className }) {
         >
           SURAJ PANDIT
         </motion.div>
-
-        {/* Hamburger for mobile */}
         <button
           className="md:hidden text-white focus:outline-none ml-2"
           onClick={() => setMenuOpen((v) => !v)}
@@ -71,8 +68,6 @@ function Navbar({ className }) {
             />
           </svg>
         </button>
-
-        {/* Navigation Menu */}
         <motion.div
           className={
             menuOpen
@@ -83,7 +78,7 @@ function Navbar({ className }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          {["Home", "About", "Education", "Skills", "Projects", "Achievements", "Contact"].map(
+          {["Home", "About", "Education", "Experience", "Skills", "Projects", "Achievements", "Contact"].map(
             (item, index) => (
               <motion.a
                 key={item}
@@ -103,8 +98,6 @@ function Navbar({ className }) {
             )
           )}
         </motion.div>
-
-        {/* Let's Talk button on the right */}
         <motion.div
           initial={{ opacity: 0, x: 50, scale: 0.8 }}
           animate={{ opacity: 1, x: 0, scale: 1 }}
@@ -121,7 +114,6 @@ function Navbar({ className }) {
           </a>
         </motion.div>
       </motion.div>
-      {/* Mobile Let's Talk button */}
       {menuOpen && (
         <div className="md:hidden w-full flex justify-center pb-4">
           <a

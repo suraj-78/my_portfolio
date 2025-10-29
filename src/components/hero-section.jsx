@@ -41,7 +41,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="min-h-screen relative overflow-hidden particles-container"
+      className="min-h-screen relative overflow-hidden flex items-center justify-center"
       style={{
         background: `
           linear-gradient(135deg, #000000 0%, #1a1a1a 25%, #000000 50%, #0d0d0d 75%, #000000 100%),
@@ -86,14 +86,14 @@ export function HeroSection() {
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-black/20 to-orange-900/10"></div>
 
-      <div className="relative z-10 container mx-auto pt-10 p-25 flex items-center min-h-screen">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
           {/* Left Content */}
-          <div className="space-y-8">
+          <div className="space-y-6 text-center lg:text-left">
             {/* Main Heading */}
             <div className="space-y-4">
               <motion.h1
-                className="text-5xl text-white lg:text-7xl font-bold leading-tight"
+                className="text-4xl sm:text-5xl lg:text-7xl text-white font-bold leading-tight"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
@@ -281,7 +281,7 @@ export function HeroSection() {
 
           {/* Right Content - Profile Image */}
           <motion.div
-            className="flex justify-center lg:justify-end"
+            className="flex justify-center lg:justify-end mt-12 lg:mt-0"
             initial={{ opacity: 0, scale: 0.5, x: 100 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.8, ease: "backOut" }}
@@ -292,7 +292,7 @@ export function HeroSection() {
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
               {/* Main container with multiple layers */}
-              <div className="relative w-80 h-80 lg:w-96 lg:h-96">
+              <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
                 {/* Outer glow ring */}
                 <motion.div
                   className="absolute inset-0 rounded-full"
