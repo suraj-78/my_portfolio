@@ -414,13 +414,10 @@ export default function Home() {
                   Full-Stack Developer
                 </h3>
                 <p className="text-gray-300 text-lg leading-relaxed">
-                  I am a passionate and dedicated Computer Science student with a strong foundation in full-stack web development. My expertise lies in building robust and scalable applications using technologies like {" "}
-                  <strong className="text-white font-bold">React</strong>,{" "}
-                  <strong className="text-white font-bold">Node.js</strong>, and{" "}
-                  <strong className="text-white font-bold">MongoDB</strong>.
+                    I’m a passionate Computer Science student and full-stack developer who loves solving real-world problems through code. My core strength lies in quickly understanding challenges and building efficient, scalable solutions — whether it’s using the MERN stack or exploring new technologies beyond it.
                 </p>
                 <p className="text-gray-300 text-lg leading-relaxed">
-                  I am a quick learner and always eager to explore new technologies and frameworks to enhance my skills.
+                    I enjoy learning, experimenting with different stacks, and continuously improving my development approach. Always open to collaboration, new ideas, and opportunities — feel free to reach out! 🚀
                 </p>
                 <div className="flex flex-wrap gap-4 pt-4">
                   <div className="flex items-center gap-2 text-orange-400">
@@ -443,7 +440,6 @@ export default function Home() {
               >
                 {[
                   { number: "900+", label: "Problems Solved" },
-                  { number: "1+", label: "Years Experience" },
                   { number: "5+", label: "Projects Completed" },
                 ].map((stat, index) => (
                   <motion.div
@@ -588,10 +584,11 @@ export default function Home() {
                   academic journey
                 </Highlighter>{" "}
                 and continuous{" "}
-                <Highlighter action="highlight" color="#87CEFA">
+                <Highlighter action="underline" color="#FF9800">
                   learning path
+                  in technology
                 </Highlighter>{" "}
-                in technology
+                
               </p>
               <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-600 mx-auto rounded-full mt-6" />
             </motion.div>
@@ -732,9 +729,10 @@ export default function Home() {
                   technologies
                 </Highlighter>{" "}
                 and tools I work with to bring{" "}
-                <Highlighter action="highlight" color="#87CEFA">
+                <Highlighter action="underline" color="#FF9800">
                   ideas to life
-                </Highlighter>
+                </Highlighter>{" "}
+                
               </p>
               <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-600 mx-auto rounded-full" />
             </motion.div>
@@ -848,7 +846,7 @@ export default function Home() {
                   portfolio projects
                 </Highlighter>{" "}
                 with interactive{" "}
-                <Highlighter action="highlight" color="#87CEFA">
+                <Highlighter action="underline" color="#FF9800">
                   following pointer effects
                 </Highlighter>
               </p>
@@ -937,7 +935,7 @@ export default function Home() {
                   ideas to life
                 </Highlighter>
                 ? Let&apos;s discuss your{" "}
-                <Highlighter action="highlight" color="#87CEFA">
+                <Highlighter action="underline" color="#FF9800">
                   next project
                 </Highlighter>
               </p>

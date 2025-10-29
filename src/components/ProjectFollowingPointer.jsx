@@ -126,7 +126,7 @@ const ProjectCard = ({ project, getTechIconAndColor, onImageClick }) => {
       <FollowerPointerCard
         title={
           <TitleComponent
-            title={project.title.split(" ")[0]}
+            title={project.title.split(" ").slice(0, 2).join(" ")}
             avatar={project.image}
           />
         }
