@@ -246,10 +246,28 @@ export default function Home() {
 
   const projects = [
     {
+      title: "Shortly - Modern URL Shortener",
+      description:
+        "• Developed a full-stack URL shortener with secure authentication and real-time analytics. • Built a RESTful backend API using Node.js, Express, and Prisma for user authentication and link management. • Integrated Redis caching to accelerate URL lookups and reduce database load, improving performance.",
+      image: "/project-1.png", 
+      tech: [
+        "Node.js",
+        "Express.js",
+        "Prisma",
+        "PostgreSQL",
+        "Redis",
+        "React",
+        "Tailwind CSS",
+        "JWT",
+      ],
+      github: "https://github.com/suraj-78/shortly", 
+      live: "https://shortly-tan-six.vercel.app/", 
+    },
+    {
       title: "Second Brain – Your Digital Knowledge Hub",
       description:
-        "• Designed a digital knowledge system capable of storing 1,000+ notes, links, and materials with advanced search and tagging. • Executed dynamic sidebar filtering and advanced search/tagging, improving content discovery and user experience. • Spearheaded the launch of 'Share Your Brain', enabling public note-sharing and attracting 50+ users in two weeks.",
-      image: "/Screenshot 2025-10-01 232803.png", 
+        "• Designed a digital knowledge system capable of storing 1,000+ notes and links with advanced search and tagging. • Executed dynamic sidebar filtering, improving content discovery. • Spearheaded the 'Share Your Brain' feature, enabling public note-sharing and attracting 50+ users in two weeks.",
+      image: "/project-2.png", 
       tech: [
         "TypeScript",
         "React.js",
@@ -259,19 +277,9 @@ export default function Home() {
         "MongoDB",
         "JWT",
       ],
-      github: "https://github.com/your-github/second-brain", // Please replace with your actual GitHub link
-      live: "#", // Please replace with your actual live link
+      github: "https://github.com/suraj-78/Second-Brain", 
+      live: "https://second-brain-10v0.onrender.com/", 
     },
-    {
-      title: "CreditSea – Offline Analytics Portal",
-      description:
-        "• Built a full-stack analytics tool tracking 5,000+ user interactions with offline-first support. • Integrated localStorage queuing and Axios interceptors, ensuring 100% event recovery and seamless background sync. • Created auto-saving forms and unsynced data alerts, increasing completion rates by 30%.",
-      image: "/Screenshot 2025-09-11 112027.png", 
-      tech: ["React", "Node.js", "TypeScript", "MongoDB"],
-      github: "https://github.com/your-github/creditsea", // Please replace with your actual GitHub link
-      live: "#", // Please replace with your actual live link
-    },
-    
   ];
 
   const education = [
