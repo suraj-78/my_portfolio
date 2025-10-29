@@ -63,12 +63,14 @@ export default function RootLayout({ children }) {
           content="black-translucent"
         />
         <meta name="apple-mobile-web-app-title" content="Suraj Pandit" />
-        <link rel="canonical" href="https://surajpandit.vercel.app/" />
+        <link rel="canonical" href="https://your-domain.com" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <main className="overflow-x-hidden">
+          {children}
+        </main>
       </body>
     </html>
   );
