@@ -26,10 +26,10 @@ export default function ContactForm() {
     // Replace with your EmailJS service ID, template ID, and user ID
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "service_76srbng",
+        "template_2g05tkg",
         form.current,
-        "YOUR_USER_ID"
+        "zrIfLSyo7Vo5DmBJ6"
       )
       .then(
         () => {
