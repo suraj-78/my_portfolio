@@ -22,14 +22,16 @@ export default function ContactForm() {
     e.preventDefault();
     setLoading(true);
     setResult(null);
+    const now = new Date();
+    const time = now.toLocaleString();
 
-    // Replace with your EmailJS service ID, template ID, and user ID
     emailjs
       .sendForm(
         "service_76srbng",
-        "template_2g05tkg",
+        "template_zce5ju8",
         form.current,
-        "zrIfLSyo7Vo5DmBJ6"
+        "zrIfLSyo7Vo5DmBJ6",
+        { time }
       )
       .then(
         () => {
@@ -46,7 +48,7 @@ export default function ContactForm() {
       .finally(() => setLoading(false));
   };
 
-  return (
+   return (
     <form ref={form} onSubmit={sendEmail} className="space-y-6">
       <div>
         <label className="block text-white font-medium mb-2">Name</label>
